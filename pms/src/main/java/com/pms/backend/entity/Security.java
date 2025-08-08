@@ -44,5 +44,122 @@ public class Security {
     @JoinColumn(name = "asset_class_id")
     private AssetClass assetClass;
 
-    // Getters and setters
+	public Security(Long id, String exchange, String symbol, String name, String isin, String sector, String industry,
+			String currency, String country, String securityCode, String series, AssetClass assetClass) {
+		super();
+		this.id = id;
+		this.exchange = exchange;
+		this.symbol = symbol;
+		this.name = name;
+		this.isin = isin;
+		this.sector = sector;
+		this.industry = industry;
+		this.currency = currency;
+		this.country = country;
+		this.securityCode = securityCode;
+		this.series = series;
+		this.assetClass = assetClass;
+	}
+
+	public Security() {
+		super();
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getExchange() {
+		return exchange;
+	}
+
+	public void setExchange(String exchange) {
+		this.exchange = exchange;
+	}
+
+	public String getSymbol() {
+		return symbol;
+	}
+
+	public void setSymbol(String symbol) {
+		this.symbol = symbol;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getIsin() {
+		return isin;
+	}
+
+	public void setIsin(String isin) {
+		this.isin = isin;
+	}
+
+	public String getSector() {
+		return sector;
+	}
+
+	public void setSector(String sector) {
+		this.sector = sector;
+	}
+
+	public String getIndustry() {
+		return industry;
+	}
+
+	public void setIndustry(String industry) {
+		this.industry = industry;
+	}
+
+	public String getCurrency() {
+		return currency;
+	}
+
+	public void setCurrency(String currency) {
+		this.currency = currency;
+	}
+
+	public String getCountry() {
+		return country;
+	}
+
+	public void setCountry(String country) {
+		this.country = country;
+	}
+
+	public String getSecurityCode() {
+		return securityCode;
+	}
+
+	public void setSecurityCode(String securityCode) {
+		this.securityCode = securityCode;
+	}
+
+	public String getSeries() {
+		return series;
+	}
+
+	public void setSeries(String series) {
+		this.series = series;
+	}
+
+	public AssetClass getAssetClass() {
+		return assetClass;
+	}
+
+	public void setAssetClass(AssetClass assetClass) {
+		this.assetClass = assetClass;
+	}
+
+    
 }
