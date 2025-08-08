@@ -21,5 +21,50 @@ public class ThemeAllocation {
     @Column(name = "allocation_percent")
     private Double allocationPercent;
 
+	public ThemeAllocation() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public ThemeAllocation(Long id, InvestmentTheme theme, AssetClass assetClass, Double allocationPercent) {
+		super();
+		this.id = id;
+		this.theme = theme;
+		this.assetClass = assetClass;
+		this.allocationPercent = allocationPercent;
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public InvestmentTheme getTheme() {
+		return theme;
+	}
+
+	public void setTheme(InvestmentTheme theme) {
+		this.theme = theme;
+	}
+
+	public AssetClass getAssetClass() {
+		return assetClass;
+	}
+
+	public void setAssetClass(AssetClass assetClass) {
+		this.assetClass = assetClass;
+	}
+
+	public Double getAllocationPercent() {
+		return allocationPercent;
+	}
+
+	public void setAllocationPercent(Double allocationPercent) {
+		this.allocationPercent = allocationPercent;
+	}
+
     // Getters and setters
 }

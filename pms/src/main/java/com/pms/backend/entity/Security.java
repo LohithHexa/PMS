@@ -43,7 +43,7 @@ public class Security {
     private String series;
 
     
-    @ManyToOne(fetch = FetchType.LAZY) // or EAGER if needed
+    @ManyToOne(fetch = FetchType.EAGER) // or EAGER if needed
     @JoinColumn(name = "asset_class_id", nullable = false)
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
     private AssetClass assetClass;
@@ -143,6 +143,29 @@ public class Security {
 	public void setAssetClass(AssetClass assetClass) {
 		this.assetClass = assetClass;
 	}
+
+	public Security(Long id, String exchange, String symbol, String name, String isin, String sector, String industry,
+			String currency, String country, String securityCode, String series, AssetClass assetClass) {
+		super();
+		this.id = id;
+		this.exchange = exchange;
+		this.symbol = symbol;
+		this.name = name;
+		this.isin = isin;
+		this.sector = sector;
+		this.industry = industry;
+		this.currency = currency;
+		this.country = country;
+		this.securityCode = securityCode;
+		this.series = series;
+		this.assetClass = assetClass;
+	}
+
+	public Security() {
+		super();
+	}
+	
+	
 
     // Getters and setters
     
