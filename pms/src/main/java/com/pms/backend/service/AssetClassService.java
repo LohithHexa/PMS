@@ -1,5 +1,9 @@
 package com.pms.backend.service;
 
-public interface AssetClassService {
+import com.pms.backend.entity.AssetClass;
+import java.util.List;
 
+public interface AssetClassService {
+    List<AssetClass> getAllAssetClasses();
+    AssetClass getAssetClassById(Long id);
 }
